@@ -2,10 +2,12 @@
 # https://github.com/robocorp/rcc/blob/master/docs/recipes.md#what-is-in-robotyaml
 
 tasks:
-  NPC:
-    robotTaskName: NPC
-  Run Shell:
+  Run Shell Tasks:
     shell: python -m robot --report NONE --outputdir output --logtitle "Task log" tasks.robot
+  TodoMVC:
+    shell: python -m robot --report NONE --outputdir output --logtitle "Task log" todomvc.robot
+  ELDNET Test Project:
+    shell: python -m robot --report NONE --outputdir output --logtitle "Task log" eldnet.robot
 
 environmentConfigs:
   - environment_windows_amd64_freeze.yaml
